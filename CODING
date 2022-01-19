@@ -1,0 +1,36 @@
+package three;
+import java.util.Scanner;
+public class WordCount {
+	
+	static int wordcount(String string)
+	{
+		int count = 0;
+		
+		char ch[] = new char [string.length()];
+		for (int a = 0; a<string.length(); a++) {
+			ch [a]= string.charAt(a);
+			if ((a > 0) && (ch[a] !=  ' ')|| ((ch[0] != ' ')&& (a == 0)))
+            count++;
+
+			
+		}
+		return count;
+		
+	}
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner (System.in);
+		String str;
+		
+		System.out.println("Please enter the word : ");
+		str = scan.nextLine();
+		System.out.println(wordcount(str) + " words.");
+			
+
+	}
+	
+	
+		
+	
+
+}
